@@ -1,0 +1,140 @@
+body {
+  font-family: Arial, sans-serif;
+  background: linear-gradient(135deg, #667eea 0%, #764ba2 100%);
+  margin: 0;
+  padding: 20px;
+  min-height: 100vh;
+}
+
+.container {
+  max-width: 1200px;
+  margin: auto;
+}
+
+h1 {
+  text-align: center;
+  margin-bottom: 20px;
+  color: white;
+  font-size: 2rem;
+  text-shadow: 0 2px 4px rgba(0,0,0,0.3);
+}
+
+form {
+  display: flex;
+  gap: 10px;
+  margin-bottom: 20px;
+  justify-content: center;
+}
+
+form input, form button {
+  padding: 12px;
+  border-radius: 8px;
+  border: 1px solid #ddd;
+  font-size: 14px;
+}
+
+form input {
+  min-width: 200px;
+  outline: none;
+}
+
+form input:focus {
+  border-color: #2563eb;
+  box-shadow: 0 0 0 2px rgba(37, 99, 235, 0.2);
+}
+
+form button {
+  background: #2563eb;
+  color: white;
+  border: none;
+  cursor: pointer;
+  font-weight: 500;
+  transition: background 0.2s;
+}
+
+form button:hover {
+  background: #1d4ed8;
+}
+
+.board {
+  display: flex;
+  gap: 20px;
+}
+
+.column {
+  flex: 1;
+  background: rgba(255, 255, 255, 0.95);
+  padding: 20px;
+  border-radius: 12px;
+  min-height: 300px;
+  box-shadow: 0 4px 12px rgba(0, 0, 0, 0.1);
+  position: relative;
+}
+
+.column::before {
+  content: '';
+  position: absolute;
+  top: 0;
+  left: 0;
+  right: 0;
+  height: 3px;
+  border-radius: 12px 12px 0 0;
+}
+
+.column:nth-child(1)::before {
+  background: #f59e0b;
+}
+
+.column:nth-child(2)::before {
+  background: #3b82f6;
+}
+
+.column:nth-child(3)::before {
+  background: #10b981;
+}
+
+.column h2 {
+  text-align: center;
+  margin-bottom: 15px;
+  color: #374151;
+  font-size: 1.1rem;
+}
+
+.task-list {
+  min-height: 200px;
+}
+
+.task {
+  background: white;
+  margin: 8px 0;
+  padding: 12px;
+  border-radius: 8px;
+  box-shadow: 0 2px 4px rgba(0,0,0,0.1);
+  cursor: grab;
+  transition: transform 0.2s, box-shadow 0.2s;
+  border-left: 3px solid #e5e7eb;
+}
+
+.task:hover {
+  transform: translateY(-1px);
+  box-shadow: 0 4px 8px rgba(0,0,0,0.15);
+  border-left-color: #3b82f6;
+}
+
+.task:active {
+  cursor: grabbing;
+}
+
+@media (max-width: 768px) {
+  .board {
+    flex-direction: column;
+  }
+  
+  form {
+    flex-direction: column;
+  }
+  
+  form input {
+    min-width: auto;
+  }
+}
