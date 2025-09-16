@@ -1,4 +1,5 @@
-
+// dragdrop.js
+// Drag & Drop logic
 
 export function enableDragAndDrop(boardEl, moveTask) {
   boardEl.addEventListener("dragstart", (e) => {

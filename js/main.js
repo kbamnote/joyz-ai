@@ -1,4 +1,4 @@
-
+// main.js
 import { saveTasks, loadTasks } from "./storage.js";
 import { createTask, renderTask } from "./tasks.js";
 import { enableDragAndDrop } from "./dragdrop.js";
@@ -10,7 +10,7 @@ const boardEl = document.getElementById("board");
 
 let tasks = [];
 
-
+// Load tasks from storage
 function init() {
   tasks = loadTasks();
   renderBoard();
@@ -20,7 +20,7 @@ function init() {
 function renderBoard() {
   ["todo", "inprogress", "done"].forEach((status) => {
     const list = document.getElementById(status);
-    list.innerHTML = ""; 
+    list.innerHTML = ""; // clear
     tasks
       .filter((t) => t.status === status)
       .forEach((task) => {

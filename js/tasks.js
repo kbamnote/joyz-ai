@@ -1,4 +1,5 @@
-
+// tasks.js
+// Task creation and rendering
 import { createElement } from "./dom.js";
 
 export function createTask(title, description) {

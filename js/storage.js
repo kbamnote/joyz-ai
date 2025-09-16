@@ -1,4 +1,5 @@
-
+// storage.js
+// Wrapper for localStorage handling tasks
 const STORAGE_KEY = "kanban_tasks";
 
 export function saveTasks(tasks) {
